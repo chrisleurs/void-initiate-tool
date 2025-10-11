@@ -30,10 +30,17 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Main Content - Grid Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
-            {/* Foto del Doctor */}
-            <div className="order-1 lg:order-1 animate-fade-in">
+          {/* Main Content - Flex Layout with Custom Order */}
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 md:gap-12 lg:items-center">
+            {/* Título - Order 1 en mobile */}
+            <div className="order-1 lg:order-2 animate-fade-in-up text-center lg:text-left">
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight">
+                Atención especializada en Cardioneumología, Medicina Crítica y Medicina Interna en Tehuacán
+              </h1>
+            </div>
+
+            {/* Foto del Doctor - Order 2 en mobile, Order 1 en desktop */}
+            <div className="order-2 lg:order-1 lg:row-span-4 animate-fade-in">
               <div className="relative rounded-card overflow-hidden shadow-premium">
                 <div className="aspect-[4/5] bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
                   <div className="text-center p-8">
@@ -47,18 +54,16 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Contenido */}
-            <div className="order-2 lg:order-2 space-y-6 animate-fade-in-up text-center lg:text-left">
-              <h1 className="font-playfair text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight">
-                Atención especializada en Cardioneumología, Medicina Crítica y Medicina Interna en Tehuacán
-              </h1>
-              
+            {/* Subtítulo - Order 3 en mobile */}
+            <div className="order-3 lg:order-2 animate-fade-in-up text-center lg:text-left">
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                 Más de 15 años de experiencia brindando atención médica de excelencia, 
                 con diagnóstico claro y trato humano.
               </p>
+            </div>
 
-              {/* CTAs */}
+            {/* CTAs - Order 4 en mobile */}
+            <div className="order-4 lg:order-2 animate-fade-in-up">
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
                 <Button
                   size="lg"
@@ -79,9 +84,11 @@ const Hero = () => {
                   Llamar ahora
                 </Button>
               </div>
+            </div>
 
-              {/* Elementos de confianza */}
-              <div className="space-y-3 pt-6">
+            {/* Elementos de confianza - Order 5 en mobile */}
+            <div className="order-5 lg:order-2 animate-fade-in-up">
+              <div className="space-y-3 pt-6 text-center lg:text-left">
                 <div className="flex items-center gap-3 justify-center lg:justify-start">
                   <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
                   <span className="text-sm md:text-base text-muted-foreground">Cédula Profesional: [NÚMERO]</span>
