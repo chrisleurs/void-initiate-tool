@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Award, Users, BookOpen } from "lucide-react";
+import { ArrowRight, Award, Users, BookOpen, Phone, CheckCircle } from "lucide-react";
 
 const Hero = () => {
   const handleWhatsAppClick = () => {
@@ -8,14 +8,18 @@ const Hero = () => {
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
 
+  const handlePhoneClick = () => {
+    window.location.href = "tel:+522381234567";
+  };
+
   return (
-    <section className="relative min-h-[90vh] md:min-h-screen flex items-center bg-gradient-hero overflow-hidden">
+    <section id="inicio" className="relative min-h-screen flex items-center bg-gradient-hero overflow-hidden pt-20 md:pt-24">
       {/* Decorative Elements */}
       <div className="absolute top-20 right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-10 w-80 h-80 bg-accent/5 rounded-full blur-3xl"></div>
       
-      <div className="container mx-auto px-4 py-16 md:py-24">
-        <div className="max-w-4xl mx-auto">
+      <div className="container mx-auto px-4 py-12 md:py-16">
+        <div className="max-w-6xl mx-auto">
           {/* Badge */}
           <div className="flex justify-center mb-6 md:mb-8 animate-fade-in">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-lighter rounded-full">
@@ -26,61 +30,92 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Main Content */}
-          <div className="text-center space-y-6 md:space-y-8 animate-fade-in-up">
-            <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight">
-              Dr. Héctor Peña Carrillo
-            </h1>
+          {/* Main Content - Grid Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            {/* Foto del Doctor */}
+            <div className="order-1 lg:order-1 animate-fade-in">
+              <div className="relative rounded-card overflow-hidden shadow-premium">
+                <div className="aspect-[4/5] bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
+                  <div className="text-center p-8">
+                    <Users className="w-32 h-32 mx-auto text-primary/30 mb-4" />
+                    <p className="text-muted-foreground">Foto profesional del Dr. Peña</p>
+                    <p className="text-sm text-muted-foreground mt-2">(Retrato premium con fondo cálido)</p>
+                  </div>
+                </div>
+                {/* Borde con degradado */}
+                <div className="absolute inset-0 border-4 border-transparent bg-gradient-to-br from-primary/30 to-accent/30 rounded-card" style={{ WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)", WebkitMaskComposite: "xor", maskComposite: "exclude", padding: "4px" }}></div>
+              </div>
+            </div>
+
+            {/* Contenido */}
+            <div className="order-2 lg:order-2 space-y-6 animate-fade-in-up text-center lg:text-left">
+              <h1 className="font-playfair text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight">
+                Atención especializada en Cardioneumología, Medicina Crítica y Medicina Interna en Tehuacán
+              </h1>
+              
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                Más de 15 años de experiencia brindando atención médica de excelencia, 
+                con diagnóstico claro y trato humano.
+              </p>
+
+              {/* CTAs */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                <Button
+                  size="lg"
+                  onClick={handleWhatsAppClick}
+                  className="bg-primary hover:bg-primary-light text-primary-foreground font-bold text-base md:text-lg px-8 py-6 md:py-7 rounded-button shadow-medium hover:shadow-premium transition-all duration-300 group"
+                >
+                  Agendar por WhatsApp
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+                
+                <Button
+                  size="lg"
+                  variant="outline"
+                  onClick={handlePhoneClick}
+                  className="border-2 border-primary text-primary hover:bg-primary-lighter font-semibold text-base md:text-lg px-8 py-6 md:py-7 rounded-button transition-all duration-300"
+                >
+                  <Phone className="mr-2 w-5 h-5" />
+                  Llamar ahora
+                </Button>
+              </div>
+
+              {/* Elementos de confianza */}
+              <div className="space-y-3 pt-6">
+                <div className="flex items-center gap-3 justify-center lg:justify-start">
+                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                  <span className="text-sm md:text-base text-muted-foreground">Cédula Profesional: [NÚMERO]</span>
+                </div>
+                <div className="flex items-center gap-3 justify-center lg:justify-start">
+                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                  <span className="text-sm md:text-base text-muted-foreground">Fellow American College of Chest</span>
+                </div>
+                <div className="flex items-center gap-3 justify-center lg:justify-start">
+                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                  <span className="text-sm md:text-base text-muted-foreground">Certificado AMCCE</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Trust Indicators - Bottom */}
+          <div className="grid grid-cols-3 gap-4 md:gap-8 pt-12 md:pt-16 max-w-4xl mx-auto">
+            <div className="flex flex-col items-center gap-2 p-4 md:p-6 rounded-card bg-card/50 backdrop-blur-sm shadow-soft hover:shadow-medium transition-all duration-300">
+              <Users className="w-6 h-6 md:w-8 md:h-8 text-primary" />
+              <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary font-playfair">500+</p>
+              <p className="text-xs md:text-sm text-muted-foreground text-center">Pacientes Atendidos</p>
+            </div>
             
-            <div className="space-y-3 md:space-y-4">
-              <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-primary">
-                Cardioneumología y Medicina Crítica
-              </p>
-              <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                Atención médica especializada con excelencia profesional y calidez humana en Tehuacán, Puebla
-              </p>
+            <div className="flex flex-col items-center gap-2 p-4 md:p-6 rounded-card bg-card/50 backdrop-blur-sm shadow-soft hover:shadow-medium transition-all duration-300">
+              <BookOpen className="w-6 h-6 md:w-8 md:h-8 text-accent" />
+              <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-accent font-playfair">15+</p>
+              <p className="text-xs md:text-sm text-muted-foreground text-center">Publicaciones Científicas</p>
             </div>
-
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4 md:pt-6">
-              <Button
-                size="lg"
-                onClick={handleWhatsAppClick}
-                className="bg-primary hover:bg-primary-light text-primary-foreground font-bold text-base md:text-lg px-8 py-6 md:py-7 rounded-button shadow-medium hover:shadow-premium transition-all duration-300 group"
-              >
-                Agendar Cita
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-primary text-primary hover:bg-primary-lighter font-semibold text-base md:text-lg px-8 py-6 md:py-7 rounded-button transition-all duration-300"
-                onClick={() => document.getElementById('especialidades')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Conocer Más
-              </Button>
-            </div>
-
-            {/* Trust Indicators */}
-            <div className="grid grid-cols-3 gap-4 md:gap-8 pt-8 md:pt-12 max-w-3xl mx-auto">
-              <div className="flex flex-col items-center gap-2 p-4 rounded-card bg-card/50 backdrop-blur-sm shadow-soft hover:shadow-medium transition-all duration-300">
-                <Users className="w-6 h-6 md:w-8 md:h-8 text-primary" />
-                <p className="text-2xl md:text-3xl font-bold text-primary font-playfair">500+</p>
-                <p className="text-xs md:text-sm text-muted-foreground text-center">Pacientes Atendidos</p>
-              </div>
-              
-              <div className="flex flex-col items-center gap-2 p-4 rounded-card bg-card/50 backdrop-blur-sm shadow-soft hover:shadow-medium transition-all duration-300">
-                <BookOpen className="w-6 h-6 md:w-8 md:h-8 text-accent" />
-                <p className="text-2xl md:text-3xl font-bold text-accent font-playfair">15+</p>
-                <p className="text-xs md:text-sm text-muted-foreground text-center">Publicaciones Científicas</p>
-              </div>
-              
-              <div className="flex flex-col items-center gap-2 p-4 rounded-card bg-card/50 backdrop-blur-sm shadow-soft hover:shadow-medium transition-all duration-300">
-                <Award className="w-6 h-6 md:w-8 md:h-8 text-primary" />
-                <p className="text-2xl md:text-3xl font-bold text-primary font-playfair">20+</p>
-                <p className="text-xs md:text-sm text-muted-foreground text-center">Años de Experiencia</p>
-              </div>
+            
+            <div className="flex flex-col items-center gap-2 p-4 md:p-6 rounded-card bg-card/50 backdrop-blur-sm shadow-soft hover:shadow-medium transition-all duration-300">
+              <Award className="w-6 h-6 md:w-8 md:h-8 text-primary" />
+              <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary font-playfair">20+</p>
+              <p className="text-xs md:text-sm text-muted-foreground text-center">Años de Experiencia</p>
             </div>
           </div>
         </div>
