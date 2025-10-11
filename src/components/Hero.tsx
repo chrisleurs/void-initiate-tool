@@ -4,12 +4,8 @@ import { ArrowRight, Award, Users, BookOpen, Phone, CheckCircle } from "lucide-r
 const Hero = () => {
   const handleWhatsAppClick = () => {
     const phoneNumber = "522381234567";
-    const message = encodeURIComponent("Hola Dr. Peña, me gustaría agendar una cita");
+    const message = encodeURIComponent("Hola Dr. Peña, me gustaría ponerme en contacto");
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
-  };
-
-  const handlePhoneClick = () => {
-    window.location.href = "tel:+522381234567";
   };
 
   return (
@@ -54,24 +50,14 @@ const Hero = () => {
 
             {/* CTAs - Order 4 en mobile */}
             <div className="order-4 lg:order-2 animate-fade-in-up">
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+              <div className="flex justify-center lg:justify-start pt-4">
                 <Button
                   size="lg"
                   onClick={handleWhatsAppClick}
                   className="bg-primary hover:bg-primary-light text-primary-foreground font-bold text-base md:text-lg px-8 py-6 md:py-7 rounded-button shadow-medium hover:shadow-premium transition-all duration-300 group"
                 >
-                  Agendar por WhatsApp
+                  Contáctame en WhatsApp
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
-                
-                <Button
-                  size="lg"
-                  variant="outline"
-                  onClick={handlePhoneClick}
-                  className="border-2 border-primary text-primary hover:bg-primary-lighter font-semibold text-base md:text-lg px-8 py-6 md:py-7 rounded-button transition-all duration-300"
-                >
-                  <Phone className="mr-2 w-5 h-5" />
-                  Llamar ahora
                 </Button>
               </div>
             </div>

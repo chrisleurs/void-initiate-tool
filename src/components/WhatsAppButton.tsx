@@ -7,7 +7,7 @@ interface WhatsAppButtonProps {
 
 const WhatsAppButton = ({ 
   phoneNumber = "522381234567", 
-  message = "Hola Dr. Peña, me gustaría agendar una cita" 
+  message = "Hola Dr. Peña, me gustaría ponerme en contacto" 
 }: WhatsAppButtonProps) => {
   const handleClick = () => {
     const encodedMessage = encodeURIComponent(message);

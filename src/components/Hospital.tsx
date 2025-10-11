@@ -4,7 +4,7 @@ import { MapPin, Clock, Phone, Navigation } from "lucide-react";
 const Hospital = () => {
   const handleWhatsAppClick = () => {
     const phoneNumber = "522381234567";
-    const message = encodeURIComponent("Hola Dr. Peña, me gustaría agendar una cita");
+    const message = encodeURIComponent("Hola Dr. Peña, me gustaría ponerme en contacto");
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
 
@@ -77,7 +77,7 @@ const Hospital = () => {
                   onClick={handleWhatsAppClick}
                   className="bg-primary hover:bg-primary-light text-primary-foreground font-semibold px-6 py-6 rounded-button"
                 >
-                  Agendar cita
+                  Contáctame en WhatsApp
                 </Button>
               </div>
             </div>

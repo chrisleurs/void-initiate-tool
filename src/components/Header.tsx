@@ -16,7 +16,7 @@ const Header = () => {
 
   const handleWhatsAppClick = () => {
     const phoneNumber = "522381234567";
-    const message = encodeURIComponent("Hola Dr. Peña, me gustaría agendar una cita");
+    const message = encodeURIComponent("Hola Dr. Peña, me gustaría ponerme en contacto");
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
 
@@ -71,7 +71,7 @@ const Header = () => {
               onClick={handleWhatsAppClick}
               className="bg-primary hover:bg-primary-light text-primary-foreground font-semibold px-6 py-2 rounded-button"
             >
-              Agendar cita
+              Contáctame en WhatsApp
             </Button>
           </div>
 
@@ -111,7 +111,7 @@ const Header = () => {
                   }}
                   className="w-full bg-primary hover:bg-primary-light text-primary-foreground font-semibold py-3 rounded-button"
                 >
-                  Agendar cita
+                  Contáctame en WhatsApp
                 </Button>
               </div>
             </nav>

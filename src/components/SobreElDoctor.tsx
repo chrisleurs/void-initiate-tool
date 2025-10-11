@@ -12,7 +12,7 @@ const membresias = [
 const SobreElDoctor = () => {
   const handleWhatsAppClick = () => {
     const phoneNumber = "522381234567";
-    const message = encodeURIComponent("Hola Dr. Peña, me gustaría agendar una cita");
+    const message = encodeURIComponent("Hola Dr. Peña, me gustaría ponerme en contacto");
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
 
@@ -93,7 +93,7 @@ const SobreElDoctor = () => {
                 size="lg"
                 className="bg-primary hover:bg-primary-light text-primary-foreground font-bold px-8 py-6 rounded-button shadow-medium hover:shadow-premium transition-all duration-300 mt-6"
               >
-                Agendar consulta
+                Contáctame en WhatsApp
               </Button>
             </div>
           </div>

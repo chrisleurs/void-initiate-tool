@@ -4,12 +4,8 @@ import { Phone, MapPin, Clock, MessageCircle } from "lucide-react";
 const CTA = () => {
   const handleWhatsAppClick = () => {
     const phoneNumber = "522381234567";
-    const message = encodeURIComponent("Hola Dr. Peña, me gustaría agendar una cita");
+    const message = encodeURIComponent("Hola Dr. Peña, me gustaría ponerme en contacto");
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
-  };
-
-  const handlePhoneClick = () => {
-    window.location.href = "tel:+522381234567";
   };
 
   return (
@@ -28,22 +24,13 @@ const CTA = () => {
           </div>
 
           {/* CTAs grandes con animación */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
+          <div className="flex justify-center items-center pt-4">
             <Button
               size="lg"
               onClick={handleWhatsAppClick}
               className="bg-white text-primary hover:bg-white/90 font-bold text-base md:text-lg px-10 py-7 rounded-button shadow-premium hover:shadow-glow transition-all duration-300 hover:-translate-y-1 animate-bounce-subtle"
             >
-              Agendar por WhatsApp
-            </Button>
-            
-            <Button
-              size="lg"
-              onClick={handlePhoneClick}
-              variant="outline"
-              className="border-2 border-white text-white hover:bg-white/10 font-semibold text-base md:text-lg px-10 py-7 rounded-button transition-all duration-300 hover:-translate-y-1"
-            >
-              Llamar al consultorio
+              Contáctame en WhatsApp
             </Button>
           </div>
 
