@@ -1,40 +1,7 @@
 import { Heart, Wind, Activity, Stethoscope, Siren, Microscope } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const especialidadesCards = [
-  {
-    icon: Heart,
-    title: "Cardioneumología",
-    description: "Diagnóstico y tratamiento integral de enfermedades cardiopulmonares"
-  },
-  {
-    icon: Activity,
-    title: "Medicina Crítica",
-    description: "Atención en situaciones de urgencia y cuidados intensivos"
-  },
-  {
-    icon: Stethoscope,
-    title: "Medicina Interna",
-    description: "Abordaje integral del adulto con enfoque preventivo"
-  },
-  {
-    icon: Siren,
-    title: "Terapia Intensiva",
-    description: "Manejo avanzado de pacientes críticos"
-  },
-  {
-    icon: Microscope,
-    title: "Procedimientos Especializados",
-    description: "Técnicas diagnósticas y terapéuticas de vanguardia"
-  },
-  {
-    icon: Wind,
-    title: "Manejo de Comorbilidades",
-    description: "Tratamiento integral de múltiples condiciones"
-  }
-];
-
-const serviciosDetallados = [
+const especialidades = [
   {
     icon: Heart,
     title: "Cardioneumología",
@@ -69,6 +36,18 @@ const serviciosDetallados = [
       "Enfermedades renales",
       "Trastornos metabólicos",
       "Enfermedades autoinmunes"
+    ]
+  },
+  {
+    icon: Siren,
+    title: "Terapia Intensiva",
+    description: "Manejo avanzado de pacientes en situaciones críticas que requieren monitoreo constante y atención especializada inmediata.",
+    condiciones: [
+      "Monitoreo hemodinámico invasivo",
+      "Soporte vital avanzado",
+      "Manejo postoperatorio complejo",
+      "Falla multiorgánica",
+      "Pacientes con alto riesgo"
     ]
   },
   {
@@ -117,71 +96,59 @@ const Especialidades = () => {
           </p>
         </div>
 
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16 md:mb-24">
-          {especialidadesCards.map((esp, index) => (
+        {/* Cards Grid - Diseño Moderno */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
+          {especialidades.map((especialidad, index) => (
             <div
               key={index}
-              className="group p-6 rounded-card bg-card border border-border shadow-soft hover:shadow-premium transition-all duration-500 hover:-translate-y-2 animate-fade-in relative overflow-hidden"
+              className="group relative p-8 rounded-card bg-card border border-border shadow-soft hover:shadow-premium transition-all duration-500 hover:-translate-y-2 animate-fade-in overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Borde superior con degradado al hover */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              {/* Borde superior con degradado animado */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_100%] opacity-0 group-hover:opacity-100 group-hover:animate-[gradient_3s_ease_infinite] transition-opacity duration-300"></div>
               
-              <div className="flex flex-col items-center text-center gap-4">
-                <div className="w-16 h-16 rounded-card bg-gradient-primary flex items-center justify-center shadow-medium group-hover:shadow-glow group-hover:scale-110 transition-all duration-300">
-                  <esp.icon className="w-8 h-8 text-primary-foreground" />
+              {/* Fondo decorativo con blur */}
+              <div className="absolute -right-10 -top-10 w-32 h-32 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors duration-500"></div>
+              
+              <div className="relative space-y-6">
+                {/* Ícono */}
+                <div className="w-20 h-20 rounded-card bg-gradient-primary flex items-center justify-center shadow-medium group-hover:shadow-glow group-hover:scale-110 transition-all duration-300">
+                  <especialidad.icon className="w-10 h-10 text-primary-foreground" />
                 </div>
                 
-                <div className="space-y-2">
-                  <h3 className="font-playfair text-xl font-semibold text-foreground">
-                    {esp.title}
+                {/* Título y descripción */}
+                <div className="space-y-3">
+                  <h3 className="font-playfair text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                    {especialidad.title}
                   </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    {esp.description}
+                    {especialidad.description}
                   </p>
                 </div>
-              </div>
-            </div>
-          ))}
-        </div>
 
-        {/* Servicios Detallados */}
-        <div className="space-y-12 md:space-y-16 max-w-6xl mx-auto">
-          {serviciosDetallados.map((servicio, index) => (
-            <div
-              key={index}
-              className={`grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 items-start animate-fade-in ${
-                index % 2 === 0 ? "" : "lg:grid-flow-dense"
-              }`}
-              style={{ animationDelay: `${index * 0.15}s` }}
-            >
-              {/* Ícono */}
-              <div className={`lg:col-span-2 flex justify-center lg:justify-start ${index % 2 === 0 ? "" : "lg:col-start-11"}`}>
-                <div className="w-20 h-20 rounded-card bg-gradient-primary flex items-center justify-center shadow-medium">
-                  <servicio.icon className="w-10 h-10 text-primary-foreground" />
-                </div>
-              </div>
-
-              {/* Contenido */}
-              <div className={`lg:col-span-10 space-y-4 ${index % 2 === 0 ? "" : "lg:col-start-1 lg:row-start-1"}`}>
-                <div>
-                  <h3 className="font-playfair text-2xl md:text-3xl font-bold text-foreground mb-3">
-                    {servicio.title}
-                  </h3>
-                  <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
-                    {servicio.description}
-                  </p>
-                </div>
+                {/* Separador decorativo */}
+                <div className="w-16 h-1 bg-gradient-primary rounded-full"></div>
 
                 {/* Lista de condiciones */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {servicio.condiciones.map((condicion, idx) => (
-                    <div key={idx} className="flex items-start gap-2">
-                      <span className="text-primary mt-1 flex-shrink-0">✓</span>
-                      <span className="text-muted-foreground">{condicion}</span>
-                    </div>
-                  ))}
+                <div className="space-y-2.5">
+                  <p className="text-xs font-semibold text-foreground uppercase tracking-wider">
+                    Condiciones Tratadas
+                  </p>
+                  <ul className="space-y-2">
+                    {especialidad.condiciones.map((condicion, idx) => (
+                      <li key={idx} className="flex items-start gap-2.5 text-sm">
+                        <span className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
+                          <span className="text-primary text-xs font-bold">✓</span>
+                        </span>
+                        <span className="text-muted-foreground leading-relaxed">{condicion}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Badge flotante */}
+                <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="w-2 h-2 rounded-full bg-accent animate-pulse"></div>
                 </div>
               </div>
             </div>
@@ -193,7 +160,7 @@ const Especialidades = () => {
           <Button
             onClick={handleWhatsAppClick}
             size="lg"
-            className="bg-primary hover:bg-primary-light text-primary-foreground font-bold text-base md:text-lg px-8 py-6 md:py-7 rounded-button shadow-medium hover:shadow-premium transition-all duration-300"
+            className="bg-primary hover:bg-primary-light text-primary-foreground font-bold text-base md:text-lg px-8 py-6 md:py-7 rounded-button shadow-medium hover:shadow-premium transition-all duration-300 hover:-translate-y-1"
           >
             Consultar disponibilidad en WhatsApp
           </Button>
