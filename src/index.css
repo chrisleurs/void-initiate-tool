@@ -8,101 +8,119 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Base colors */
+    /* Medical Professional Color Palette */
     --background: 0 0% 100%;
-    --foreground: 240 10% 15%;
+    --foreground: 0 0% 17%; /* #2B2B2B */
 
     /* Card colors */
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 15%;
+    --card-foreground: 0 0% 17%;
 
     /* Popover colors */
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 15%;
+    --popover-foreground: 0 0% 17%;
 
-    /* Primary brand colors - Modern blue gradient */
-    --primary: 217 91% 60%;
+    /* Primary - Verde Petróleo (Professional) */
+    --primary: 169 43% 21%; /* #1E4C45 */
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 217 91% 70%;
+    --primary-light: 169 43% 35%;
+    --primary-lighter: 169 43% 85%;
 
-    /* Secondary colors */
-    --secondary: 270 60% 65%;
-    --secondary-foreground: 0 0% 100%;
+    /* Secondary - Arena Claro (Neutral Warm) */
+    --secondary: 30 25% 95%; /* #F6F4F1 */
+    --secondary-foreground: 0 0% 17%;
+
+    /* Accent - Terracota Suave (Human Touch) */
+    --accent: 15 56% 60%; /* #D27D60 */
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 15 56% 75%;
 
     /* Muted colors */
-    --muted: 240 5% 96%;
-    --muted-foreground: 240 4% 46%;
+    --muted: 30 25% 95%;
+    --muted-foreground: 0 0% 42%; /* #6B6B6B */
 
-    /* Accent colors */
-    --accent: 340 82% 62%;
-    --accent-foreground: 0 0% 100%;
+    /* WhatsApp green */
+    --whatsapp: 142 70% 49%; /* #25D366 */
+    --whatsapp-foreground: 0 0% 100%;
 
     /* Destructive colors */
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
     /* Border and input */
-    --border: 240 6% 90%;
-    --input: 240 6% 90%;
-    --ring: 217 91% 60%;
+    --border: 169 43% 85%;
+    --input: 169 43% 90%;
+    --ring: 169 43% 21%;
 
     /* Radius */
-    --radius: 0.75rem;
+    --radius: 1rem;
+    --radius-card: 1rem;
+    --radius-button: 1.5625rem;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(270 60% 65%) 100%);
-    --gradient-hero: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(240 5% 98%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(340 82% 62%) 0%, hsl(270 60% 65%) 100%);
+    /* Gradients - Verde Petróleo → Arena Claro */
+    --gradient-primary: linear-gradient(135deg, hsl(169 43% 21%) 0%, hsl(169 43% 35%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(169 43% 21% / 0.03) 0%, hsl(30 25% 95%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(15 56% 60%) 0%, hsl(15 56% 75%) 100%);
+    --gradient-premium: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(30 25% 95%) 100%);
 
-    /* Shadows */
-    --shadow-soft: 0 2px 8px -2px hsl(240 10% 15% / 0.08);
-    --shadow-medium: 0 8px 24px -6px hsl(240 10% 15% / 0.12);
-    --shadow-large: 0 16px 48px -12px hsl(240 10% 15% / 0.16);
-    --shadow-glow: 0 0 40px hsl(217 91% 60% / 0.3);
+    /* Premium Shadows - Difusas */
+    --shadow-soft: 0 2px 20px -5px hsl(169 43% 21% / 0.08);
+    --shadow-medium: 0 8px 25px -6px hsl(169 43% 21% / 0.10);
+    --shadow-large: 0 16px 40px -12px hsl(169 43% 21% / 0.12);
+    --shadow-premium: 0 20px 60px -15px hsl(169 43% 21% / 0.15);
+    --shadow-glow: 0 0 40px hsl(169 43% 21% / 0.15);
 
-    /* Transitions */
+    /* Transitions - Subtle & Professional */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-micro: all 0.2s ease-in-out;
   }
 
   .dark {
-    --background: 240 10% 8%;
+    --background: 169 43% 8%;
     --foreground: 0 0% 98%;
 
-    --card: 240 10% 12%;
+    --card: 169 43% 12%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 240 10% 12%;
+    --popover: 169 43% 12%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 217 91% 60%;
+    --primary: 169 43% 35%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 217 91% 70%;
+    --primary-light: 169 43% 45%;
+    --primary-lighter: 169 43% 20%;
 
-    --secondary: 270 60% 55%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 30 15% 15%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 240 10% 16%;
-    --muted-foreground: 240 5% 65%;
-
-    --accent: 340 82% 58%;
+    --accent: 15 56% 55%;
     --accent-foreground: 0 0% 100%;
+    --accent-light: 15 56% 65%;
 
-    --destructive: 0 84% 60%;
+    --muted: 169 43% 16%;
+    --muted-foreground: 0 0% 65%;
+
+    --whatsapp: 142 70% 45%;
+    --whatsapp-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 240 10% 20%;
-    --input: 240 10% 20%;
-    --ring: 217 91% 60%;
+    --border: 169 43% 20%;
+    --input: 169 43% 20%;
+    --ring: 169 43% 35%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(217 91% 50%) 0%, hsl(270 60% 55%) 100%);
-    --gradient-hero: linear-gradient(180deg, hsl(240 10% 8%) 0%, hsl(240 10% 12%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(340 82% 58%) 0%, hsl(270 60% 55%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(169 43% 25%) 0%, hsl(169 43% 35%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(169 43% 8%) 0%, hsl(169 43% 12%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(15 56% 50%) 0%, hsl(15 56% 60%) 100%);
+    --gradient-premium: linear-gradient(180deg, hsl(169 43% 8%) 0%, hsl(169 43% 12%) 100%);
 
-    --shadow-soft: 0 2px 8px -2px hsl(0 0% 0% / 0.3);
-    --shadow-medium: 0 8px 24px -6px hsl(0 0% 0% / 0.4);
-    --shadow-large: 0 16px 48px -12px hsl(0 0% 0% / 0.5);
-    --shadow-glow: 0 0 40px hsl(217 91% 60% / 0.4);
+    --shadow-soft: 0 2px 20px -5px hsl(0 0% 0% / 0.3);
+    --shadow-medium: 0 8px 25px -6px hsl(0 0% 0% / 0.4);
+    --shadow-large: 0 16px 40px -12px hsl(0 0% 0% / 0.5);
+    --shadow-premium: 0 20px 60px -15px hsl(0 0% 0% / 0.6);
+    --shadow-glow: 0 0 40px hsl(169 43% 35% / 0.4);
   }
 }
 
