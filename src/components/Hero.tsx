@@ -19,18 +19,8 @@ const Hero = () => {
       <div className="absolute bottom-20 left-10 w-80 h-80 bg-accent/5 rounded-full blur-3xl"></div>
       
       <div className="container mx-auto px-4 py-12 md:py-16">
-        <div className="max-w-6xl mx-auto">
-          {/* Badge */}
-          <div className="flex justify-center mb-6 md:mb-8 animate-fade-in">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-lighter rounded-full">
-              <Award className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary">
-                Mayor número de publicaciones científicas en Tehuacán
-              </span>
-            </div>
-          </div>
-
-          {/* Main Content - Flex Layout with Custom Order */}
+      <div className="max-w-6xl mx-auto">
+        {/* Main Content - Flex Layout with Custom Order */}
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 md:gap-12 lg:items-center">
             {/* Título - Order 1 en mobile */}
             <div className="order-1 lg:order-2 animate-fade-in-up text-center lg:text-left">
