@@ -131,5 +131,98 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-display: swap;
+  }
+}
+
+@layer utilities {
+  /* Scroll Animation Classes */
+  .animate-scroll-fade {
+    animation: scrollFade 0.6s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .animate-scroll-slide {
+    animation: scrollSlide 0.6s ease-out forwards;
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  /* Hover Effects */
+  .hover-lift {
+    @apply transition-all duration-300;
+  }
+
+  .hover-lift:hover {
+    @apply -translate-y-2 shadow-premium;
+  }
+
+  .hover-border-top:hover::before {
+    content: '';
+    @apply absolute top-0 left-0 right-0 h-1 bg-gradient-primary;
+    animation: borderSlide 0.3s ease-out forwards;
+  }
+
+  /* Pulse animation subtle para CTAs */
+  @keyframes bounce-subtle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-2px); }
+  }
+
+  .animate-bounce-subtle {
+    animation: bounce-subtle 8s ease-in-out infinite;
+  }
+
+  /* Pulse slow para WhatsApp button */
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.85; }
+  }
+
+  .animate-pulse-slow {
+    animation: pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  /* Link hover animation */
+  .link-underline {
+    @apply relative inline-block;
+  }
+
+  .link-underline::after {
+    content: '';
+    @apply absolute w-full scale-x-0 h-0.5 bottom-0 left-0 bg-primary origin-bottom-right transition-transform duration-300;
+  }
+
+  .link-underline:hover::after {
+    @apply scale-x-100 origin-bottom-left;
+  }
+
+  /* Focus states for accessibility */
+  .focus-outline {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
+  }
+}
+
+@keyframes scrollFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scrollSlide {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes borderSlide {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
   }
 }

@@ -2,21 +2,18 @@ import { Star, Quote } from "lucide-react";
 
 const testimonios = [
   {
-    nombre: "María González",
-    ciudad: "Tehuacán, Puebla",
-    comentario: "El Dr. Peña me salvó la vida. Su profesionalismo y calidez humana son excepcionales. Me diagnosticó a tiempo y su tratamiento fue muy efectivo.",
+    testimonio: "Gracias a la atención del Dr. Peña, mi padre salió adelante cuando estuvo en terapia intensiva. Su profesionalismo y dedicación fueron fundamentales para la recuperación.",
+    autor: "Familiar de paciente",
     rating: 5
   },
   {
-    nombre: "Roberto Martínez",
-    ciudad: "Tehuacán, Puebla",
-    comentario: "Excelente médico. Siempre explica todo con claridad y paciencia. Me siento en las mejores manos. Su atención en medicina crítica fue fundamental.",
+    testimonio: "El Dr. Peña explica todo con mucha calma y claridad. Te hace sentir tranquilo y confiado durante todo el tratamiento.",
+    autor: "María Elena R.",
     rating: 5
   },
   {
-    nombre: "Laura Sánchez",
-    ciudad: "Puebla Capital",
-    comentario: "Lo recomiendo ampliamente. Es un doctor muy preparado y dedicado. El mejor especialista en cardioneumología de la región sin duda.",
+    testimonio: "Profesional, humano y siempre disponible cuando lo necesitas. Su experiencia se nota en cada consulta.",
+    autor: "Carlos M.",
     rating: 5
   }
 ];
@@ -34,31 +31,47 @@ const Testimonios = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
           {testimonios.map((test, index) => (
             <div
               key={index}
-              className="relative p-6 md:p-8 rounded-card bg-card border border-border shadow-soft hover:shadow-premium transition-all duration-500 hover:-translate-y-2 animate-fade-in"
-              style={{ animationDelay: `${index * 0.15}s` }}
+              className="relative p-8 md:p-10 rounded-card bg-card border border-border shadow-soft hover:shadow-premium transition-all duration-500 hover:-translate-y-2 opacity-0 animate-fade-in overflow-hidden"
+              style={{ 
+                animationDelay: `${index * 0.2}s`,
+                animationFillMode: 'forwards',
+                transform: `translateX(${index % 2 === 0 ? '-30px' : '0'})`
+              }}
             >
-              <Quote className="absolute top-4 right-4 w-8 h-8 text-primary/10" />
-              
-              <div className="flex gap-1 mb-4">
-                {[...Array(test.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-accent text-accent" />
-                ))}
+              {/* Comillas grandes como marca de agua */}
+              <div className="absolute top-4 left-4 text-6xl md:text-7xl font-playfair text-primary/10 leading-none">
+                "
               </div>
-
-              <p className="text-sm md:text-base text-foreground mb-6 leading-relaxed italic">
-                "{test.comentario}"
-              </p>
-
-              <div className="border-t border-border pt-4">
-                <p className="font-semibold text-foreground">{test.nombre}</p>
-                <p className="text-sm text-muted-foreground">{test.ciudad}</p>
+              
+              <div className="relative z-10">
+                <div className="mb-4 flex gap-1">
+                  {[...Array(test.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-accent text-accent" />
+                  ))}
+                </div>
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
+                  {test.testimonio}
+                </p>
+                <p className="font-semibold text-foreground">
+                  — {test.autor}
+                </p>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Opcional: Enlace a reseñas */}
+        <div className="text-center mt-10">
+          <p className="text-sm text-muted-foreground">
+            Leer más opiniones en{" "}
+            <a href="#" className="text-primary hover:underline font-semibold transition-colors duration-300">
+              Google Reviews
+            </a>
+          </p>
         </div>
       </div>
     </section>

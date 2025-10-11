@@ -2,63 +2,59 @@ import { GraduationCap, Award, Building2, Shield } from "lucide-react";
 
 const certificaciones = [
   {
-    icon: GraduationCap,
-    title: "Certificación en Medicina Interna",
-    institution: "Consejo Mexicano de Medicina Interna",
-    year: "Vigente"
-  },
-  {
     icon: Award,
-    title: "Especialidad en Medicina Crítica",
-    institution: "UNAM - Hospital General de México",
-    year: "2015"
+    title: "Fellow American College of Chest",
+    description: "Reconocimiento internacional en medicina torácica y respiratoria"
   },
   {
     icon: Shield,
-    title: "Certificación en Cardioneumología",
-    institution: "Consejo Mexicano de Neumología y Cirugía de Tórax",
-    year: "Vigente"
+    title: "Certificación AMCCE",
+    description: "Asociación Mexicana de Colegio de Cirujanos y Especialistas"
+  },
+  {
+    icon: GraduationCap,
+    title: "Certificado por el CMMI",
+    description: "Consejo Mexicano de Medicina Interna"
   },
   {
     icon: Building2,
-    title: "Miembro Activo",
-    institution: "Sociedad Mexicana de Medicina Crítica",
-    year: "2016-Actual"
+    title: "Asociación Mexicana de Cardiología",
+    description: "Miembro activo con especialización en cardiología"
   }
 ];
 
 const Certificaciones = () => {
   return (
-    <section className="py-16 md:py-24 bg-secondary">
+    <section id="reconocimientos" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12 md:mb-16 max-w-3xl mx-auto">
+        <div className="text-center mb-12 md:mb-16 max-w-3xl mx-auto animate-fade-in-up">
           <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 md:mb-6">
-            Certificaciones y Membresías
+            Reconocimientos y Certificaciones
           </h2>
           <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-            Formación continua y excelencia académica respaldada por las instituciones más prestigiosas
+            Formación continua y reconocimientos que respaldan mi compromiso con la excelencia médica
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
           {certificaciones.map((cert, index) => (
             <div
               key={index}
-              className="group p-6 rounded-card bg-card shadow-soft hover:shadow-premium transition-all duration-500 hover:-translate-y-2 text-center animate-fade-in"
-              style={{ animationDelay: `${index * 0.15}s` }}
+              className="group p-6 rounded-card bg-card border border-border shadow-soft hover:shadow-premium transition-all duration-500 hover:-translate-y-2 animate-fade-in text-center opacity-0"
+              style={{ 
+                animationDelay: `${index * 0.15}s`,
+                animationFillMode: 'forwards'
+              }}
             >
-              <div className="w-16 h-16 mx-auto mb-4 rounded-card bg-gradient-accent flex items-center justify-center shadow-medium group-hover:shadow-glow group-hover:scale-110 transition-all duration-300">
-                <cert.icon className="w-8 h-8 text-accent-foreground" />
+              <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-primary flex items-center justify-center shadow-medium group-hover:shadow-glow group-hover:scale-110 transition-all duration-300">
+                <cert.icon className="w-10 h-10 text-primary-foreground" />
               </div>
               
-              <h3 className="font-semibold text-lg mb-2 text-foreground">
+              <h3 className="font-playfair text-lg md:text-xl font-semibold text-foreground mb-2">
                 {cert.title}
               </h3>
-              <p className="text-sm text-muted-foreground mb-1">
-                {cert.institution}
-              </p>
-              <p className="text-xs font-medium text-primary">
-                {cert.year}
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {cert.description}
               </p>
             </div>
           ))}

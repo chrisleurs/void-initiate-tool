@@ -1,71 +1,94 @@
-import { Heart } from "lucide-react";
+import { MapPin, Phone, Mail, GraduationCap } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-foreground text-background py-8 md:py-12">
+    <footer className="bg-primary text-primary-foreground py-12 md:py-16">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            {/* Logo y descripción */}
-            <div className="text-center md:text-left">
-              <h3 className="font-playfair text-2xl font-bold mb-3">
-                Dr. Héctor Peña Carrillo
-              </h3>
-              <p className="text-sm text-background/70 leading-relaxed">
-                Especialista en Cardioneumología, Medicina Crítica y Medicina Interna
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-8">
+          {/* Columna 1: Dr. Héctor Peña Carrillo */}
+          <div className="space-y-4">
+            <h3 className="font-playfair text-2xl font-bold text-white">
+              Dr. Héctor Peña Carrillo
+            </h3>
+            <p className="text-sm text-primary-foreground/80 leading-relaxed">
+              Cardioneumología<br />
+              Medicina Crítica<br />
+              Medicina Interna
+            </p>
+          </div>
+
+          {/* Columna 2: Contacto */}
+          <div className="space-y-4">
+            <h4 className="font-semibold text-lg text-white">Contacto</h4>
+            <div className="space-y-3 text-sm">
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4 flex-shrink-0" />
+                <span>Teléfono: (238) 123-4567</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4 flex-shrink-0" />
+                <span>WhatsApp: (238) 123-4567</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
+                <span>
+                  Hospital Independencia<br />
+                  Av. Independencia #123<br />
+                  Tehuacán, Puebla CP 75700
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Columna 3: Certificaciones */}
+          <div className="space-y-4">
+            <h4 className="font-semibold text-lg text-white">Certificaciones</h4>
+            <div className="space-y-3 text-sm">
+              <div className="flex items-start gap-2">
+                <GraduationCap className="w-4 h-4 mt-1 flex-shrink-0" />
+                <div>
+                  <p>Cédula Profesional:</p>
+                  <p className="font-semibold">[NÚMERO]</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-2">
+                <GraduationCap className="w-4 h-4 mt-1 flex-shrink-0" />
+                <div>
+                  <p>Cédula de Especialidad:</p>
+                  <p className="font-semibold">[NÚMERO]</p>
+                </div>
+              </div>
+              <p className="text-xs text-primary-foreground/70 pt-2">
+                Fellow American College of Chest Physicians
               </p>
             </div>
-
-            {/* Enlaces rápidos */}
-            <div className="text-center">
-              <h4 className="font-semibold mb-3">Enlaces Rápidos</h4>
-              <ul className="space-y-2 text-sm text-background/70">
-                <li>
-                  <a href="#especialidades" className="hover:text-background transition-colors">
-                    Especialidades
-                  </a>
-                </li>
-                <li>
-                  <a href="#certificaciones" className="hover:text-background transition-colors">
-                    Certificaciones
-                  </a>
-                </li>
-                <li>
-                  <a href="#testimonios" className="hover:text-background transition-colors">
-                    Testimonios
-                  </a>
-                </li>
-                <li>
-                  <a href="#publicaciones" className="hover:text-background transition-colors">
-                    Publicaciones
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* Contacto */}
-            <div className="text-center md:text-right">
-              <h4 className="font-semibold mb-3">Contacto</h4>
-              <ul className="space-y-2 text-sm text-background/70">
-                <li>Tehuacán, Puebla</li>
-                <li>contacto@drpena.com</li>
-                <li>(238) 123-4567</li>
-              </ul>
-            </div>
           </div>
 
-          {/* Copyright */}
-          <div className="border-t border-background/20 pt-6 text-center">
-            <p className="text-sm text-background/70 flex items-center justify-center gap-2">
-              <Heart className="w-4 h-4 text-accent fill-accent" />
-              <span>
-                © {new Date().getFullYear()} Dr. Héctor Peña Carrillo. Todos los derechos reservados.
-              </span>
-            </p>
-            <p className="text-xs text-background/50 mt-2">
-              Cédula Profesional: 1234567 | Cédula de Especialidad: 7654321
-            </p>
+          {/* Columna 4: Enlaces */}
+          <div className="space-y-4">
+            <h4 className="font-semibold text-lg text-white">Enlaces</h4>
+            <ul className="space-y-2 text-sm">
+              <li><a href="#inicio" className="hover:underline hover:text-white transition-colors duration-300" aria-label="Ir a Inicio">Inicio</a></li>
+              <li><a href="#servicios" className="hover:underline hover:text-white transition-colors duration-300" aria-label="Ir a Servicios">Servicios</a></li>
+              <li><a href="#sobre-mi" className="hover:underline hover:text-white transition-colors duration-300" aria-label="Ir a Sobre mí">Sobre mí</a></li>
+              <li><a href="#publicaciones" className="hover:underline hover:text-white transition-colors duration-300" aria-label="Ir a Publicaciones">Publicaciones</a></li>
+              <li><a href="#reconocimientos" className="hover:underline hover:text-white transition-colors duration-300" aria-label="Ir a Reconocimientos">Reconocimientos</a></li>
+              <li><a href="#hospital" className="hover:underline hover:text-white transition-colors duration-300" aria-label="Ir a Hospital">Hospital</a></li>
+              <li><a href="#" className="hover:underline hover:text-white transition-colors duration-300" aria-label="Ver perfil en Doctoralia">Doctoralia</a></li>
+              <li><a href="#" className="hover:underline hover:text-white transition-colors duration-300" aria-label="Ver perfil en Google Business">Google Business</a></li>
+              <li><a href="#" className="hover:underline hover:text-white transition-colors duration-300" aria-label="Leer Aviso de Privacidad">Aviso de Privacidad</a></li>
+            </ul>
           </div>
+        </div>
+
+        {/* Footer bottom */}
+        <div className="border-t border-primary-foreground/20 pt-8 text-center">
+          <p className="text-sm text-primary-foreground/80 mb-2">
+            © 2025 Dr. Héctor Peña Carrillo. Todos los derechos reservados.
+          </p>
+          <p className="text-xs text-primary-foreground/60">
+            Cédula Profesional: [NÚMERO] | Cédula de Especialidad: [NÚMERO]
+          </p>
         </div>
       </div>
     </footer>
