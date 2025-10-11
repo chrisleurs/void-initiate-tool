@@ -14,10 +14,10 @@ export default {
     },
     extend: {
       fontFamily: {
-        'playfair': ['Playfair Display', 'serif'],
-        'inter': ['Inter', 'sans-serif'],
-        'sans': ['Inter', 'sans-serif'],
-        'serif': ['Playfair Display', 'serif'],
+        'lato': ['Lato', 'sans-serif'],
+        'raleway': ['Raleway', 'sans-serif'],
+        'sans': ['Raleway', 'sans-serif'],
+        'serif': ['Lato', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
