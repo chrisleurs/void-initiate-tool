@@ -26,7 +26,6 @@ const Header = () => {
     { label: "Publicaciones", href: "#publicaciones" },
     { label: "Reconocimientos", href: "#reconocimientos" },
     { label: "Hospital", href: "#hospital" },
-    { label: "Contacto", href: "#contacto" },
   ];
 
   return (
