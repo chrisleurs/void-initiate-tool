@@ -21,48 +21,51 @@ const SobreElDoctor = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
-            {/* Imagen */}
-            <div className="order-2 lg:order-1 animate-fade-in">
-              <div className="relative rounded-card overflow-hidden shadow-premium">
-                <div className="aspect-[4/5] bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <Users className="w-24 h-24 mx-auto text-primary/40 mb-4" />
-                    <p className="text-muted-foreground">Foto del Dr. en consultorio</p>
-                    <p className="text-sm text-muted-foreground mt-2">(Ambiente profesional)</p>
-                  </div>
-                </div>
-                <div className="absolute inset-0 border-2 border-primary/20 rounded-card"></div>
-              </div>
-            </div>
-
             {/* Contenido */}
             <div className="order-1 lg:order-2 space-y-6 animate-fade-in-up">
+              {/* Título */}
               <div>
                 <h2 className="font-playfair text-3xl md:text-4xl font-bold text-foreground mb-4">
                   Conóceme
                 </h2>
-                <div className="space-y-4 text-base md:text-lg text-muted-foreground leading-relaxed">
-                  <p>
-                    Con más de <strong className="text-foreground">25 años de experiencia médica</strong> en el manejo de 
-                    pacientes críticos y patologías respiratorias complejas, soy una referencia nacional e internacional 
-                    en cardioneumología, anestesia y medicina intensiva.
-                  </p>
-                  <p>
-                    Mi trayectoria combina formación en instituciones líderes como <strong className="text-foreground">Médica Sur</strong>, 
-                    el <strong className="text-foreground">Instituto Nacional de Cardiología Ignacio Chávez</strong> y la 
-                    <strong className="text-foreground"> Pontificia Universidad Católica de Chile</strong>, con participación 
-                    activa en más de <strong className="text-foreground">30 congresos internacionales</strong> en América, Europa y Latinoamérica.
-                  </p>
-                  <p>
-                    He publicado en revistas de alto impacto como <strong className="text-foreground">Chest Journal</strong> y 
-                    <strong className="text-foreground"> European Society of Intensive Care</strong>, contribuyendo significativamente 
-                    al avance de la medicina crítica y cardioneumología en México y la región.
-                  </p>
-                  <p>
-                    Mi filosofía de trabajo combina mi sólida preparación académica con un <strong className="text-foreground">enfoque 
-                    humano y empático</strong>, ofreciendo atención especializada con el trato que cada paciente merece.
-                  </p>
+              </div>
+
+              {/* Imagen - Solo visible en móvil, debajo del título */}
+              <div className="lg:hidden animate-fade-in mb-6">
+                <div className="relative rounded-card overflow-hidden shadow-premium">
+                  <div className="aspect-[4/5] bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                    <div className="text-center p-8">
+                      <Users className="w-24 h-24 mx-auto text-primary/40 mb-4" />
+                      <p className="text-muted-foreground">Foto del Dr. en consultorio</p>
+                      <p className="text-sm text-muted-foreground mt-2">(Ambiente profesional)</p>
+                    </div>
+                  </div>
+                  <div className="absolute inset-0 border-2 border-primary/20 rounded-card"></div>
                 </div>
+              </div>
+
+              {/* Texto descriptivo */}
+              <div className="space-y-4 text-base md:text-lg text-muted-foreground leading-relaxed">
+                <p>
+                  Con más de <strong className="text-foreground">25 años de experiencia médica</strong> en el manejo de 
+                  pacientes críticos y patologías respiratorias complejas, soy una referencia nacional e internacional 
+                  en cardioneumología, anestesia y medicina intensiva.
+                </p>
+                <p>
+                  Mi trayectoria combina formación en instituciones líderes como <strong className="text-foreground">Médica Sur</strong>, 
+                  el <strong className="text-foreground">Instituto Nacional de Cardiología Ignacio Chávez</strong> y la 
+                  <strong className="text-foreground"> Pontificia Universidad Católica de Chile</strong>, con participación 
+                  activa en más de <strong className="text-foreground">30 congresos internacionales</strong> en América, Europa y Latinoamérica.
+                </p>
+                <p>
+                  He publicado en revistas de alto impacto como <strong className="text-foreground">Chest Journal</strong> y 
+                  <strong className="text-foreground"> European Society of Intensive Care</strong>, contribuyendo significativamente 
+                  al avance de la medicina crítica y cardioneumología en México y la región.
+                </p>
+                <p>
+                  Mi filosofía de trabajo combina mi sólida preparación académica con un <strong className="text-foreground">enfoque 
+                  humano y empático</strong>, ofreciendo atención especializada con el trato que cada paciente merece.
+                </p>
               </div>
 
               {/* Membresías */}
@@ -109,6 +112,20 @@ const SobreElDoctor = () => {
               >
                 Contáctame en WhatsApp
               </Button>
+            </div>
+
+            {/* Imagen - Solo visible en desktop */}
+            <div className="hidden lg:block order-2 lg:order-1 animate-fade-in">
+              <div className="relative rounded-card overflow-hidden shadow-premium">
+                <div className="aspect-[4/5] bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                  <div className="text-center p-8">
+                    <Users className="w-24 h-24 mx-auto text-primary/40 mb-4" />
+                    <p className="text-muted-foreground">Foto del Dr. en consultorio</p>
+                    <p className="text-sm text-muted-foreground mt-2">(Ambiente profesional)</p>
+                  </div>
+                </div>
+                <div className="absolute inset-0 border-2 border-primary/20 rounded-card"></div>
+              </div>
             </div>
           </div>
         </div>
