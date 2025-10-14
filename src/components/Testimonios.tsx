@@ -64,15 +64,6 @@ const Testimonios = () => {
           ))}
         </div>
 
-        {/* Opcional: Enlace a reseñas */}
-        <div className="text-center mt-10">
-          <p className="text-sm text-muted-foreground">
-            Leer más opiniones en{" "}
-            <a href="#" className="text-primary hover:underline font-semibold transition-colors duration-300">
-              Google Reviews
-            </a>
-          </p>
-        </div>
       </div>
     </section>
   );
