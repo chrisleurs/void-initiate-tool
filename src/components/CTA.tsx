@@ -3,7 +3,7 @@ import { Phone, MapPin, Clock, MessageCircle } from "lucide-react";
 
 const CTA = () => {
   const handleWhatsAppClick = () => {
-    const phoneNumber = "522381234567";
+    const phoneNumber = "5212381119392";
     const message = encodeURIComponent("Hola Dr. Peña, me gustaría ponerme en contacto");
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
@@ -38,20 +38,20 @@ const CTA = () => {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-8 max-w-4xl mx-auto">
             <div className="flex flex-col items-center gap-2 text-center">
               <Phone className="w-6 h-6 text-white" />
-              <p className="text-sm font-semibold text-white">Teléfono</p>
-              <p className="text-sm text-primary-foreground/80">(238) 123-4567</p>
+              <p className="text-sm font-semibold text-white">Consultorio</p>
+              <p className="text-sm text-primary-foreground/80">238 382 4393</p>
             </div>
             
             <div className="flex flex-col items-center gap-2 text-center">
               <MessageCircle className="w-6 h-6 text-white" />
-              <p className="text-sm font-semibold text-white">WhatsApp</p>
-              <p className="text-sm text-primary-foreground/80">(238) 123-4567</p>
+              <p className="text-sm font-semibold text-white">WhatsApp/Citas</p>
+              <p className="text-sm text-primary-foreground/80">238 111 9392</p>
             </div>
             
             <div className="flex flex-col items-center gap-2 text-center">
               <MapPin className="w-6 h-6 text-white" />
-              <p className="text-sm font-semibold text-white">Ubicación</p>
-              <p className="text-sm text-primary-foreground/80">Hospital Independencia</p>
+              <p className="text-sm font-semibold text-white">Dirección</p>
+              <p className="text-sm text-primary-foreground/80">Manuel Gutiérrez Zamora 307-C</p>
             </div>
             
             <div className="flex flex-col items-center gap-2 text-center">

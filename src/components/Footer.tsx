@@ -23,18 +23,21 @@ const Footer = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 flex-shrink-0" />
-                <span>Teléfono: (238) 123-4567</span>
+                <span>Consultorio: 238 382 4393</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 flex-shrink-0" />
-                <span>WhatsApp: (238) 123-4567</span>
+                <span>WhatsApp/Citas: 238 111 9392</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="w-4 h-4 flex-shrink-0" />
+                <span>hectorhpc1@gmail.com</span>
               </div>
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
                 <span>
-                  Hospital Independencia<br />
-                  Av. Independencia #123<br />
-                  Tehuacán, Puebla CP 75700
+                  Manuel Gutiérrez Zamora 307-C<br />
+                  Tehuacán, Puebla
                 </span>
               </div>
             </div>
@@ -44,19 +47,9 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="font-semibold text-lg text-white">Certificaciones</h4>
             <div className="space-y-3 text-sm">
-              <div className="flex items-start gap-2">
-                <GraduationCap className="w-4 h-4 mt-1 flex-shrink-0" />
-                <div>
-                  <p>Cédula Profesional:</p>
-                  <p className="font-semibold">[NÚMERO]</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-2">
-                <GraduationCap className="w-4 h-4 mt-1 flex-shrink-0" />
-                <div>
-                  <p>Cédula de Especialidad:</p>
-                  <p className="font-semibold">[NÚMERO]</p>
-                </div>
+              <div className="space-y-2">
+                <p className="text-xs">Consejo Mexicano de Anestesiología</p>
+                <p className="text-xs">Consejo Mexicano de Medicina Crítica</p>
               </div>
               <p className="text-xs text-primary-foreground/70 pt-2">
                 Fellow American College of Chest Physicians
@@ -84,10 +77,10 @@ const Footer = () => {
         {/* Footer bottom */}
         <div className="border-t border-primary-foreground/20 pt-8 text-center">
           <p className="text-sm text-primary-foreground/80 mb-2">
-            © 2025 Dr. Héctor Peña Carrillo. Todos los derechos reservados.
+            © 2025 Dr. Héctor Peña Carrillo, FCCP. Todos los derechos reservados.
           </p>
           <p className="text-xs text-primary-foreground/60">
-            Cédula Profesional: [NÚMERO] | Cédula de Especialidad: [NÚMERO]
+            Fellow of the American College of Chest Physicians
           </p>
         </div>
       </div>

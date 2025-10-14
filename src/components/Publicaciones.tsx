@@ -10,36 +10,60 @@ const estadisticas = [
   },
   {
     icon: Globe,
-    numero: "25+",
-    label: "Congresos Nacionales",
+    numero: "30+",
+    label: "Congresos Internacionales",
     color: "text-accent"
   },
   {
     icon: Award,
-    numero: "15+",
-    label: "Congresos Internacionales",
+    numero: "4",
+    label: "Revistas de Alto Impacto",
     color: "text-primary"
   },
   {
-    icon: TrendingUp,
-    numero: "#1",
-    label: "En Publicaciones en Tehuacán",
+    icon: Book,
+    numero: "2",
+    label: "Capítulos en Manual Moderno",
     color: "text-accent"
   }
 ];
 
 const publicaciones = [
   {
-    titulo: "Manejo ventilatorio en SDRA severo: Protocolo de estrategias protectoras",
-    fuente: "Journal of Critical Care Medicine",
-    año: 2024,
+    titulo: "Dapaglifozina mejora los pacientes con neumonía en comparación a la metformina",
+    fuente: "Chest Journal",
+    año: 2023,
     categoria: "Revista Internacional"
   },
   {
-    titulo: "Actualización en hipertensión pulmonar en pacientes críticos",
-    fuente: "Congreso Nacional de Medicina Crítica",
+    titulo: "Anticoagulación oral en jóvenes con hipertensión pulmonar: análisis de 10 años",
+    fuente: "American Thorax Journal",
+    año: 2016,
+    categoria: "Revista Internacional"
+  },
+  {
+    titulo: "Tromboembolia pulmonar aguda",
+    fuente: "Manual Moderno - Capítulo",
+    año: 2020,
+    categoria: "Capítulo de Libro"
+  },
+  {
+    titulo: "Tromboembolia pulmonar crónica",
+    fuente: "Manual Moderno - Capítulo",
+    año: 2020,
+    categoria: "Capítulo de Libro"
+  },
+  {
+    titulo: "Efecto del Sitaxentan en pacientes con hipertensión pulmonar",
+    fuente: "European Respiratory Society",
+    año: 2018,
+    categoria: "Revista Internacional"
+  },
+  {
+    titulo: "Manejo ventilatorio en SDRA severo: Protocolo de estrategias protectoras",
+    fuente: "Congreso Latinoamericano de Medicina Crítica",
     año: 2024,
-    categoria: "Congreso Nacional"
+    categoria: "Congreso Internacional"
   },
   {
     titulo: "Efectividad de la broncoscopia terapéutica en neumonía grave bilateral",
@@ -48,40 +72,16 @@ const publicaciones = [
     categoria: "Revista Nacional"
   },
   {
-    titulo: "Protocolos de destete ventilatorio en pacientes con EPOC severo",
-    fuente: "American College of Chest Physicians",
-    año: 2023,
-    categoria: "Congreso Internacional"
-  },
-  {
     titulo: "Biomarcadores pronósticos en sepsis de origen pulmonar",
     fuente: "Critical Care Medicine",
     año: 2023,
     categoria: "Revista Internacional"
   },
   {
-    titulo: "Manejo integral del paciente crítico con comorbilidades cardiopulmonares",
-    fuente: "Manual de Medicina Crítica Moderna",
-    año: 2022,
-    categoria: "Capítulo de Libro"
-  },
-  {
-    titulo: "Estrategias de ventilación no invasiva en insuficiencia respiratoria aguda",
-    fuente: "Congreso Latinoamericano de Medicina Crítica",
-    año: 2023,
-    categoria: "Congreso Internacional"
-  },
-  {
     titulo: "Uso de ultrasonido pulmonar en el diagnóstico de neumonía",
     fuente: "Revista de Medicina Interna de México",
     año: 2022,
     categoria: "Revista Nacional"
-  },
-  {
-    titulo: "Manejo hemodinámico en shock cardiogénico",
-    fuente: "Simposio Internacional de Cardiología",
-    año: 2024,
-    categoria: "Congreso Internacional"
   }
 ];
 
@@ -111,8 +111,9 @@ const Publicaciones = () => {
               Publicaciones Científicas y Académicas
             </h2>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              Con el mayor número de publicaciones científicas en Tehuacán, el Dr. Peña ha contribuido 
-              significativamente al avance de la medicina crítica y cardioneumología en México y Latinoamérica.
+              Participación activa en congresos internacionales y publicaciones en revistas de alto impacto 
+              como Chest Journal y European Society of Intensive Care, contribuyendo al avance de la medicina 
+              crítica y cardioneumología.
             </p>
           </div>
 

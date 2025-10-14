@@ -3,7 +3,7 @@ import { MapPin, Clock, Phone, Navigation } from "lucide-react";
 
 const Hospital = () => {
   const handleWhatsAppClick = () => {
-    const phoneNumber = "522381234567";
+    const phoneNumber = "5212381119392";
     const message = encodeURIComponent("Hola Dr. Peña, me gustaría ponerme en contacto");
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
@@ -44,9 +44,8 @@ const Hospital = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Dirección</h3>
                     <p className="text-muted-foreground">
-                      Av. Independencia #123<br />
-                      Colonia Centro, Tehuacán, Puebla<br />
-                      CP 75700
+                      Manuel Gutiérrez Zamora 307-C<br />
+                      Tehuacán, Puebla
                     </p>
                   </div>
                 </div>
@@ -56,8 +55,9 @@ const Hospital = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Contacto</h3>
                     <p className="text-muted-foreground">
-                      Tel: (238) 123-4567<br />
-                      WhatsApp: (238) 123-4567
+                      Consultorio: 238 382 4393<br />
+                      WhatsApp/Citas: 238 111 9392<br />
+                      Email: hectorhpc1@gmail.com
                     </p>
                   </div>
                 </div>

@@ -15,7 +15,7 @@ const Header = () => {
   }, []);
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = "522381234567";
+    const phoneNumber = "5212381119392";
     const message = encodeURIComponent("Hola Dr. Peña, me gustaría ponerme en contacto");
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
@@ -44,10 +44,10 @@ const Header = () => {
           <div className="flex-shrink-0">
             <a href="#inicio" className="block">
               <h1 className="font-playfair text-xl md:text-2xl font-bold text-foreground">
-                Dr. Héctor Peña Carrillo
+                Dr. Héctor Peña Carrillo, FCCP
               </h1>
               <p className="text-xs md:text-sm text-muted-foreground">
-                Cardioneumología • Medicina Crítica • Medicina Interna
+                Terapia Intensiva • Anestesiología • Enfermedades Respiratorias
               </p>
             </a>
           </div>

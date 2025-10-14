@@ -2,24 +2,34 @@ import { GraduationCap, Award, Building2, Shield } from "lucide-react";
 
 const certificaciones = [
   {
-    icon: Award,
-    title: "Fellow American College of Chest",
-    description: "Reconocimiento internacional en medicina torácica y respiratoria"
+    icon: Shield,
+    title: "Consejo Mexicano de Anestesiología",
+    description: "Certificación en anestesiología por el consejo regulador nacional"
   },
   {
     icon: Shield,
-    title: "Certificación AMCCE",
-    description: "Asociación Mexicana de Colegio de Cirujanos y Especialistas"
+    title: "Consejo Mexicano de Medicina Crítica",
+    description: "Certificación en medicina crítica y terapia intensiva"
   },
   {
-    icon: GraduationCap,
-    title: "Certificado por el CMMI",
-    description: "Consejo Mexicano de Medicina Interna"
+    icon: Award,
+    title: "Fellow ACCP",
+    description: "Fellow del American College of Chest Physicians - Reconocimiento internacional"
   },
   {
     icon: Building2,
-    title: "Asociación Mexicana de Cardiología",
-    description: "Miembro activo con especialización en cardiología"
+    title: "Asociación Mexicana de Enfermedades del Endotelio",
+    description: "Miembro activo en investigación de enfermedades cardiovasculares"
+  },
+  {
+    icon: GraduationCap,
+    title: "Vicepresidente Sociedad Médica de Tehuacán",
+    description: "Líder en la comunidad médica local 2023-2025"
+  },
+  {
+    icon: Award,
+    title: "Fellow en Broncoscopía",
+    description: "American Pulmonary Society - Especialización en procedimientos diagnósticos"
   }
 ];
 
@@ -36,7 +46,7 @@ const Certificaciones = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
           {certificaciones.map((cert, index) => (
             <div
               key={index}

@@ -3,7 +3,7 @@ import { ArrowRight, Award, Users, BookOpen, Phone, CheckCircle } from "lucide-r
 
 const Hero = () => {
   const handleWhatsAppClick = () => {
-    const phoneNumber = "522381234567";
+    const phoneNumber = "5212381119392";
     const message = encodeURIComponent("Hola Dr. Peña, me gustaría ponerme en contacto");
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
@@ -21,8 +21,14 @@ const Hero = () => {
             {/* Título - Order 1 en mobile */}
             <div className="order-1 lg:order-2 animate-fade-in-up text-center lg:text-left">
               <h1 className="font-serif text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight">
-                Atención especializada en Cardioneumología, Medicina Crítica y Medicina Interna en Tehuacán
+                Dr. Héctor Peña Carrillo, FCCP
               </h1>
+              <p className="text-lg md:text-xl text-muted-foreground mt-4">
+                Especialista en Terapia Intensiva, Anestesiología y Enfermedades Respiratorias
+              </p>
+              <p className="text-base md:text-lg text-muted-foreground mt-2">
+                Fellow of the American College of Chest Physicians
+              </p>
             </div>
 
             {/* Foto del Doctor - Order 2 en mobile, Order 1 en desktop */}
@@ -43,8 +49,9 @@ const Hero = () => {
             {/* Subtítulo - Order 3 en mobile */}
             <div className="order-3 lg:order-2 animate-fade-in-up text-center lg:text-left">
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                Más de 15 años de experiencia brindando atención médica de excelencia, 
-                con diagnóstico claro y trato humano.
+                Más de 25 años de experiencia médica en el manejo de pacientes críticos 
+                y patologías respiratorias complejas. Referencia nacional e internacional 
+                en cardioneumología, anestesia y medicina intensiva.
               </p>
             </div>
 
@@ -67,15 +74,15 @@ const Hero = () => {
               <div className="space-y-3 pt-6 text-center lg:text-left">
                 <div className="flex items-center gap-3 justify-center lg:justify-start">
                   <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                  <span className="text-sm md:text-base text-muted-foreground">Cédula Profesional: [NÚMERO]</span>
+                  <span className="text-sm md:text-base text-muted-foreground">Consejo Mexicano de Anestesiología</span>
                 </div>
                 <div className="flex items-center gap-3 justify-center lg:justify-start">
                   <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                  <span className="text-sm md:text-base text-muted-foreground">Fellow American College of Chest</span>
+                  <span className="text-sm md:text-base text-muted-foreground">Consejo Mexicano de Medicina Crítica</span>
                 </div>
                 <div className="flex items-center gap-3 justify-center lg:justify-start">
                   <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                  <span className="text-sm md:text-base text-muted-foreground">Certificado AMCCE</span>
+                  <span className="text-sm md:text-base text-muted-foreground">Fellow American College of Chest Physicians</span>
                 </div>
               </div>
             </div>
@@ -91,13 +98,13 @@ const Hero = () => {
             
             <div className="flex flex-col items-center gap-2 p-4 md:p-6 rounded-card bg-card/50 backdrop-blur-sm shadow-soft hover:shadow-medium transition-all duration-300">
               <BookOpen className="w-6 h-6 md:w-8 md:h-8 text-accent" />
-              <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-accent font-playfair">15+</p>
+              <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-accent font-playfair">40+</p>
               <p className="text-xs md:text-sm text-muted-foreground text-center">Publicaciones Científicas</p>
             </div>
             
             <div className="flex flex-col items-center gap-2 p-4 md:p-6 rounded-card bg-card/50 backdrop-blur-sm shadow-soft hover:shadow-medium transition-all duration-300">
               <Award className="w-6 h-6 md:w-8 md:h-8 text-primary" />
-              <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary font-playfair">20+</p>
+              <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary font-playfair">25+</p>
               <p className="text-xs md:text-sm text-muted-foreground text-center">Años de Experiencia</p>
             </div>
           </div>

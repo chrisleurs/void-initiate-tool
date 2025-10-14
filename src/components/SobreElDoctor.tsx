@@ -2,16 +2,16 @@ import { Button } from "@/components/ui/button";
 import { Award, GraduationCap, Users, Heart } from "lucide-react";
 
 const membresias = [
+  "Consejo Mexicano de Anestesiología",
+  "Consejo Mexicano de Medicina Crítica y Terapia Intensiva",
   "American College of Chest Physicians (Fellow)",
-  "Sociedad Mexicana de Medicina Crítica",
-  "Asociación Mexicana de Cardiología",
-  "Consejo Mexicano de Medicina Interna",
-  "Sociedad Mexicana de Neumología y Cirugía de Tórax"
+  "Asociación Mexicana de Enfermedades del Endotelio",
+  "Sociedad Médica de Tehuacán — Vicepresidente 2023–2025"
 ];
 
 const SobreElDoctor = () => {
   const handleWhatsAppClick = () => {
-    const phoneNumber = "522381234567";
+    const phoneNumber = "5212381119392";
     const message = encodeURIComponent("Hola Dr. Peña, me gustaría ponerme en contacto");
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
@@ -43,19 +43,24 @@ const SobreElDoctor = () => {
                 </h2>
                 <div className="space-y-4 text-base md:text-lg text-muted-foreground leading-relaxed">
                   <p>
-                    Con más de <strong className="text-foreground">15 años de experiencia</strong> en medicina especializada, 
-                    mi compromiso es brindar atención médica de excelencia con un enfoque integral y trato humano.
+                    Con más de <strong className="text-foreground">25 años de experiencia médica</strong> en el manejo de 
+                    pacientes críticos y patologías respiratorias complejas, soy una referencia nacional e internacional 
+                    en cardioneumología, anestesia y medicina intensiva.
                   </p>
                   <p>
-                    Mi formación incluye estudios en instituciones de prestigio como la <strong className="text-foreground">UAPEP</strong>, 
-                    <strong className="text-foreground"> UAA</strong>, <strong className="text-foreground">UNAM</strong> y la 
-                    <strong className="text-foreground"> Pontificia Universidad Católica de Chile</strong>, lo que me ha 
-                    permitido mantenerme a la vanguardia en cardioneumología y medicina crítica.
+                    Mi trayectoria combina formación en instituciones líderes como <strong className="text-foreground">Médica Sur</strong>, 
+                    el <strong className="text-foreground">Instituto Nacional de Cardiología Ignacio Chávez</strong> y la 
+                    <strong className="text-foreground"> Pontificia Universidad Católica de Chile</strong>, con participación 
+                    activa en más de <strong className="text-foreground">30 congresos internacionales</strong> en América, Europa y Latinoamérica.
                   </p>
                   <p>
-                    Mi filosofía de trabajo se centra en la <strong className="text-foreground">atención integral</strong>, 
-                    combinando diagnóstico preciso, tratamiento basado en evidencia científica y, sobre todo, 
-                    el trato humano que cada paciente merece.
+                    He publicado en revistas de alto impacto como <strong className="text-foreground">Chest Journal</strong> y 
+                    <strong className="text-foreground"> European Society of Intensive Care</strong>, contribuyendo significativamente 
+                    al avance de la medicina crítica y cardioneumología en México y la región.
+                  </p>
+                  <p>
+                    Mi filosofía de trabajo combina mi sólida preparación académica con un <strong className="text-foreground">enfoque 
+                    humano y empático</strong>, ofreciendo atención especializada con el trato que cada paciente merece.
                   </p>
                 </div>
               </div>
@@ -80,9 +85,18 @@ const SobreElDoctor = () => {
               <div className="p-6 rounded-card bg-primary-lighter border border-primary/20">
                 <div className="flex items-start gap-3">
                   <GraduationCap className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                  <div className="space-y-1">
-                    <p className="font-semibold text-foreground">Cédula Profesional: [NÚMERO]</p>
-                    <p className="font-semibold text-foreground">Cédula de Especialidad: [NÚMERO]</p>
+                  <div className="space-y-2">
+                    <p className="font-semibold text-foreground text-sm">
+                      📚 <strong>Formación Académica:</strong>
+                    </p>
+                    <ul className="text-sm text-muted-foreground space-y-1 ml-4">
+                      <li>• Médico Cirujano — UPAEP, Puebla</li>
+                      <li>• Anestesiología — Hospital Miguel Hidalgo, Aguascalientes</li>
+                      <li>• Medicina del Paciente en Estado Crítico — Fundación Clínica Médica Sur</li>
+                      <li>• Cardioneumología — Instituto Nacional de Cardiología Ignacio Chávez</li>
+                      <li>• Fellow en Broncoscopía — American Pulmonary Society</li>
+                      <li>• Fellow en Ecocardiografía (UBA) — En curso</li>
+                    </ul>
                   </div>
                 </div>
               </div>
