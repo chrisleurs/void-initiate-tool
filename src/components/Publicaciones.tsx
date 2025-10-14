@@ -167,16 +167,6 @@ const Publicaciones = () => {
             ))}
           </div>
 
-          {/* CTA */}
-          <div className="text-center mt-10 md:mt-12">
-            <Button
-              variant="outline"
-              className="border-2 border-primary text-primary hover:bg-primary-lighter font-semibold px-8 py-6 rounded-button transition-all duration-300"
-            >
-              Ver todas las publicaciones
-              <ExternalLink className="ml-2 w-4 h-4" />
-            </Button>
-          </div>
         </div>
       </div>
     </section>
