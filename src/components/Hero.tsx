@@ -89,11 +89,17 @@ const Hero = () => {
           </div>
 
           {/* Trust Indicators - Bottom */}
-          <div className="grid grid-cols-2 gap-4 md:gap-8 pt-12 md:pt-16 max-w-3xl mx-auto">
+          <div className="grid grid-cols-3 gap-4 md:gap-8 pt-12 md:pt-16 max-w-4xl mx-auto">
             <div className="flex flex-col items-center gap-2 p-4 md:p-6 rounded-card bg-card/50 backdrop-blur-sm shadow-soft hover:shadow-medium transition-all duration-300">
               <Users className="w-6 h-6 md:w-8 md:h-8 text-primary" />
               <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary font-playfair">500+</p>
               <p className="text-xs md:text-sm text-muted-foreground text-center">Pacientes Atendidos</p>
+            </div>
+            
+            <div className="flex flex-col items-center gap-2 p-4 md:p-6 rounded-card bg-card/50 backdrop-blur-sm shadow-soft hover:shadow-medium transition-all duration-300">
+              <BookOpen className="w-6 h-6 md:w-8 md:h-8 text-accent" />
+              <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-accent font-playfair">40+</p>
+              <p className="text-xs md:text-sm text-muted-foreground text-center">Publicaciones Científicas</p>
             </div>
             
             <div className="flex flex-col items-center gap-2 p-4 md:p-6 rounded-card bg-card/50 backdrop-blur-sm shadow-soft hover:shadow-medium transition-all duration-300">
