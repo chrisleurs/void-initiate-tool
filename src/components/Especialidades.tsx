@@ -89,7 +89,7 @@ const Especialidades = () => {
         {/* Header */}
         <div className="text-center mb-12 md:mb-16 max-w-3xl mx-auto animate-fade-in-up">
           <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 md:mb-6">
-            Servicios y Especialidades
+            Especialidades
           </h2>
           <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
             Atención médica especializada con enfoque multidisciplinario y tecnología de vanguardia

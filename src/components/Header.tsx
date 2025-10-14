@@ -21,7 +21,7 @@ const Header = () => {
   };
 
   const menuItems = [
-    { label: "Servicios", href: "#servicios" },
+    { label: "Especialidades", href: "#servicios" },
     { label: "Sobre mí", href: "#sobre-mi" },
     { label: "Publicaciones", href: "#publicaciones" },
     { label: "Reconocimientos", href: "#reconocimientos" },
