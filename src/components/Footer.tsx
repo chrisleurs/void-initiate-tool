@@ -68,7 +68,7 @@ const Footer = () => {
               <li><a href="#reconocimientos" className="hover:underline hover:text-white transition-colors duration-300" aria-label="Ir a Reconocimientos">Reconocimientos</a></li>
               <li><a href="#hospital" className="hover:underline hover:text-white transition-colors duration-300" aria-label="Ir a Hospital">Hospital</a></li>
               <li><a href="#" className="hover:underline hover:text-white transition-colors duration-300" aria-label="Ver perfil en Google Business">Google Business</a></li>
-              <li><a href="#" className="hover:underline hover:text-white transition-colors duration-300" aria-label="Leer Aviso de Privacidad">Aviso de Privacidad</a></li>
+              <li><a href="/aviso-privacidad" className="hover:underline hover:text-white transition-colors duration-300" aria-label="Leer Aviso de Privacidad">Aviso de Privacidad</a></li>
             </ul>
           </div>
         </div>
