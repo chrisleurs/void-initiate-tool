@@ -10,6 +10,7 @@ import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import ExportPDFButton from "@/components/ExportPDFButton";
 
 const Index = () => {
   return (
@@ -26,6 +27,7 @@ const Index = () => {
       <CTA />
       <Footer />
       <WhatsAppButton phoneNumber="5212381119392" />
+      <ExportPDFButton />
     </div>
   );
 };
