@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Award, Users, BookOpen, Phone, CheckCircle } from "lucide-react";
+import DownloadPDFButton from "./DownloadPDFButton";
 
 const Hero = () => {
   const handleWhatsAppClick = () => {
@@ -57,7 +58,7 @@ const Hero = () => {
 
             {/* CTAs - Order 4 en mobile */}
             <div className="order-4 lg:order-2 animate-fade-in-up">
-              <div className="flex justify-center lg:justify-start pt-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
                 <Button
                   size="lg"
                   onClick={handleWhatsAppClick}
@@ -66,6 +67,10 @@ const Hero = () => {
                   Contáctame en WhatsApp
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
+                <DownloadPDFButton 
+                  buttonText="Descargar CV"
+                  className="text-base md:text-lg px-8 py-6 md:py-7 rounded-button shadow-medium hover:shadow-premium transition-all duration-300"
+                />
               </div>
             </div>
 
