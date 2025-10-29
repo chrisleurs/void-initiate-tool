@@ -14,7 +14,7 @@ import ExportPDFButton from "@/components/ExportPDFButton";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background" id="main-content">
       <Header />
       <Hero />
       <Especialidades />

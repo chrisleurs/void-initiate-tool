@@ -18,6 +18,7 @@ const WhatsAppButton = ({
   return (
     <button
       onClick={handleClick}
+      data-floating-button="true"
       className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 md:w-16 md:h-16 bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground rounded-full shadow-large hover:shadow-premium transition-all duration-300 hover:scale-110 group animate-pulse-slow"
       aria-label="Contactar por WhatsApp"
     >
