@@ -1,10 +1,9 @@
-import { BookOpen, ExternalLink, Award, Globe, Book, TrendingUp } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { BookOpen, ExternalLink, Award, Globe, Book, TrendingUp, Quote } from "lucide-react";
 
 const estadisticas = [
   {
     icon: BookOpen,
-    numero: "40+",
+    numero: "50+",
     label: "Publicaciones Científicas",
     color: "text-primary"
   },
@@ -15,20 +14,38 @@ const estadisticas = [
     color: "text-accent"
   },
   {
-    icon: Award,
-    numero: "4",
-    label: "Revistas de Alto Impacto",
+    icon: TrendingUp,
+    numero: "332+",
+    label: "Citas Verificables",
     color: "text-primary"
   },
   {
     icon: Book,
-    numero: "2",
-    label: "Capítulos en Manual Moderno",
+    numero: "4",
+    label: "Capítulos en Libros Internacionales",
     color: "text-accent"
   }
 ];
 
 const publicaciones = [
+  {
+    titulo: "Effect of atrial septostomy on the survival of patients with severe pulmonary arterial hypertension",
+    fuente: "European Respiratory Journal",
+    año: 2011,
+    categoria: "Revista Internacional"
+  },
+  {
+    titulo: "Impact of emergency intubation on central venous oxygen saturation in critically ill patients",
+    fuente: "Critical Care / PMC",
+    año: 2009,
+    categoria: "Revista Internacional"
+  },
+  {
+    titulo: "Does anticoagulation in Eisenmenger syndrome impact long-term survival?",
+    fuente: "Congenital Heart Disease / Wiley",
+    año: 2012,
+    categoria: "Revista Internacional"
+  },
   {
     titulo: "Complicaciones del Factor VII activado en una terapia intensiva polivalente",
     fuente: "Archivos de Cardiología de México",
@@ -42,7 +59,7 @@ const publicaciones = [
     categoria: "Revista Internacional"
   },
   {
-    titulo: "Traqueotomía percutánea: experiencia de 5 años en una terapia intensiva",
+    titulo: "Traqueostomía percutánea: experiencia de 5 años en una terapia intensiva",
     fuente: "Revista del Instituto Nacional de Enfermedades Respiratorias",
     año: 2007,
     categoria: "Revista Nacional"
@@ -90,6 +107,12 @@ const publicaciones = [
     categoria: "Revista Internacional"
   },
   {
+    titulo: "Long-term efficacy of sitaxsentan in patients with severe pulmonary arterial hypertension: a six-year follow-up",
+    fuente: "Chest Journal",
+    año: 2009,
+    categoria: "Revista Internacional"
+  },
+  {
     titulo: "Tromboembolia pulmonar crónica",
     fuente: "Manual Moderno",
     año: 2009,
@@ -108,16 +131,10 @@ const publicaciones = [
     categoria: "Revista Internacional"
   },
   {
-    titulo: "Efecto de la septostomía auricular en la supervivencia de pacientes con hipertensión pulmonar severa",
-    fuente: "Research Gate Magazine",
+    titulo: "Oral anticoagulation therapy in children, adolescents and young adults with pulmonary arterial hypertension: a 10-year survival analysis",
+    fuente: "ATS International Conference",
     año: 2010,
-    categoria: "Revista Internacional"
-  },
-  {
-    titulo: "Anticoagulación en síndrome de Eisenmenger: impacto en la supervivencia a largo plazo",
-    fuente: "Congenital Heart Disease",
-    año: 2012,
-    categoria: "Revista Internacional"
+    categoria: "Congreso Internacional"
   },
   {
     titulo: "Evaluación holística de la perfusión en choque séptico: fundamentos y aplicaciones clínicas",
@@ -126,14 +143,8 @@ const publicaciones = [
     categoria: "Capítulo de Libro"
   },
   {
-    titulo: "Terapia anticoagulante oral en jóvenes con hipertensión pulmonar: análisis de 10 años",
-    fuente: "American Thorax Journal",
-    año: 2016,
-    categoria: "Revista Internacional"
-  },
-  {
     titulo: "Septostomía auricular",
-    fuente: "Textbook of Vascular Disease, University of Chicago / Harvard University",
+    fuente: "Textbook of Pulmonary Vascular Disease, University of Chicago / Harvard University",
     año: 2016,
     categoria: "Capítulo de Libro"
   },
@@ -156,6 +167,12 @@ const publicaciones = [
     categoria: "Revista Internacional"
   },
   {
+    titulo: "Eficacia de quetiapina en pacientes con COVID-19 y psicosis activa en terapia intensiva",
+    fuente: "Medicina Crítica",
+    año: 2021,
+    categoria: "Revista Nacional"
+  },
+  {
     titulo: "Dapaglifozina mejora los pacientes con neumonía en comparación a la metformina",
     fuente: "Chest Journal",
     año: 2023,
@@ -165,28 +182,71 @@ const publicaciones = [
     titulo: "Fungal agents associated with chronic cough and respiratory infections",
     fuente: "Chest Journal",
     año: 2024,
-    categoria: "Revista Internacional"
+    categoria: "Poster/Congreso"
   },
   {
     titulo: "Simultaneous acute myocardial infarction and bilateral pulmonary embolism in post-COVID-19 patient",
     fuente: "Chest Journal",
     año: 2024,
-    categoria: "Revista Internacional"
+    categoria: "Poster/Congreso"
   },
   {
     titulo: "Mediastinal mixed germ cell tumor: seminoma and endodermal sinus tumor",
     fuente: "Chest Journal",
     año: 2024,
-    categoria: "Revista Internacional"
+    categoria: "Poster/Congreso"
+  },
+  {
+    titulo: "Recombinant Activated Factor VII: A Successful Treatment for Acute Uncontrolled Severe Bleeding in a Critical Care Unit",
+    fuente: "CHEST (Abstract)",
+    año: 2007,
+    categoria: "Poster/Congreso"
+  },
+  {
+    titulo: "Torsades de Pointes por intoxicación de anestésicos locales",
+    fuente: "Anestesia en México",
+    año: 2025,
+    categoria: "Revista Nacional"
+  },
+  {
+    titulo: "Importancia del adiestramiento en el manejo de la vía aérea comprometida en la angina de Ludwig",
+    fuente: "Anestesia en México",
+    año: 2025,
+    categoria: "Revista Nacional"
+  },
+  {
+    titulo: "Myasthenia gravis: a clinical challenge in postoperative management and its complications",
+    fuente: "WCICC Vancouver",
+    año: 2025,
+    categoria: "Poster/Congreso"
+  },
+  {
+    titulo: "Patients on dapagliflozin (SGLT2 inhibitors) with pneumonia do not progress to sepsis compared to metformin",
+    fuente: "WCICC Vancouver",
+    año: 2025,
+    categoria: "Poster/Congreso"
+  },
+  {
+    titulo: "Candida infection associated with epiglottitis",
+    fuente: "WCICC Vancouver",
+    año: 2025,
+    categoria: "Poster/Congreso"
+  },
+  {
+    titulo: "Ludwig's angina and the importance of advanced airway approach in the awake patient",
+    fuente: "WCICC Vancouver",
+    año: 2025,
+    categoria: "Poster/Congreso"
   }
 ];
 
-const categoriasColores = {
+const categoriasColores: Record<string, string> = {
   "Revista Internacional": "bg-primary/10 text-primary border-l-4 border-primary",
   "Congreso Nacional": "bg-accent/10 text-accent border-l-4 border-accent",
   "Revista Nacional": "bg-primary/10 text-primary border-l-4 border-primary",
   "Congreso Internacional": "bg-accent/10 text-accent border-l-4 border-accent",
-  "Capítulo de Libro": "bg-muted text-foreground border-l-4 border-muted-foreground"
+  "Capítulo de Libro": "bg-muted text-foreground border-l-4 border-muted-foreground",
+  "Poster/Congreso": "bg-accent/10 text-accent border-l-4 border-accent"
 };
 
 const Publicaciones = () => {
@@ -208,7 +268,7 @@ const Publicaciones = () => {
             </h2>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
               Participación activa en congresos internacionales y publicaciones en revistas de alto impacto 
-              como Chest Journal y European Society of Intensive Care, contribuyendo al avance de la medicina 
+              como Chest Journal, European Respiratory Journal y Critical Care, contribuyendo al avance de la medicina 
               crítica y cardioneumología.
             </p>
           </div>
@@ -232,24 +292,22 @@ const Publicaciones = () => {
             ))}
           </div>
 
-          {/* Grid de Publicaciones - Diseño compacto */}
+          {/* Grid de Publicaciones */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-4">
             {publicaciones.map((pub, index) => (
               <div
                 key={index}
                 className={`group p-3 md:p-4 rounded-lg bg-card shadow-soft hover:shadow-medium transition-all duration-300 hover:translate-x-1 animate-fade-in ${
-                  categoriasColores[pub.categoria as keyof typeof categoriasColores]
+                  categoriasColores[pub.categoria] || ""
                 }`}
                 style={{ animationDelay: `${index * 0.02}s` }}
               >
-                {/* Badge de categoría */}
                 <div className="mb-2">
                   <span className="inline-block px-2 py-0.5 text-[10px] md:text-xs font-semibold rounded-full bg-background/50">
                     {pub.categoria}
                   </span>
                 </div>
 
-                {/* Contenido */}
                 <h3 className="font-semibold text-xs md:text-sm text-foreground mb-2 leading-tight group-hover:text-primary transition-colors line-clamp-3">
                   {pub.titulo}
                 </h3>
