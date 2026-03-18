@@ -1,4 +1,4 @@
-import { Heart, Wind, Activity, Stethoscope, Siren, Microscope } from "lucide-react";
+import { Heart, Wind, Activity, Stethoscope, Siren, Microscope, ShieldAlert } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const especialidades = [
