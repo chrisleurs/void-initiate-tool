@@ -21,6 +21,10 @@ const faqs = [
   {
     question: "¿Cuáles son los horarios de consulta?",
     answer: "Lunes a viernes de 9:00 a 19:00 hrs en Hospital Independencia. También manejo citas de urgencia según disponibilidad."
+  },
+  {
+    question: "¿Qué significa ser FCCP?",
+    answer: "FCCP significa Fellow of the American College of Chest Physicians. Es una distinción de alto nivel otorgada por el Colegio Americano de Médicos de Tórax (CHEST) a profesionales destacados en medicina del tórax. Implica un reconocimiento internacional de excelencia, competencia superior y liderazgo en el cuidado de pacientes con enfermedades torácicas. Los Fellows participan activamente en investigación, enseñanza y avance de la medicina del tórax. Esta distinción acredita al profesional como experto reconocido internacionalmente en neumología, medicina crítica y áreas afines."
   }
 ];
 

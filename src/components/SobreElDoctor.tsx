@@ -68,6 +68,32 @@ const SobreElDoctor = () => {
                 </p>
               </div>
 
+              {/* Trayectoria Profesional */}
+              <div className="space-y-3">
+                <h3 className="font-playfair text-xl font-semibold text-foreground flex items-center gap-2">
+                  <Heart className="w-5 h-5 text-primary" />
+                  Trayectoria Profesional
+                </h3>
+                <ul className="space-y-2">
+                  {[
+                    "Médico Cirujano — UPAEP, Puebla",
+                    "Especialidad en Anestesiología — Hospital Miguel Hidalgo, Aguascalientes",
+                    "Subespecialidad en Medicina del Paciente en Estado Crítico — Fundación Clínica Médica Sur",
+                    "Subespecialidad en Cardioneumología — Instituto Nacional de Cardiología Ignacio Chávez",
+                    "Fellow en Broncoscopía — American Pulmonary Society",
+                    "Fellow of the American College of Chest Physicians (FCCP)",
+                    "Fellow en Ecocardiografía (UBA) — En curso",
+                    "+30 congresos internacionales en América, Europa y Latinoamérica",
+                    "Publicaciones en Chest Journal y European Society of Intensive Care"
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-start gap-2 text-muted-foreground">
+                      <span className="text-primary mt-1">✓</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
               {/* Membresías */}
               <div className="space-y-3">
                 <h3 className="font-playfair text-xl font-semibold text-foreground flex items-center gap-2">

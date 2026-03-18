@@ -64,6 +64,30 @@ const especialidades = [
   },
   {
     icon: Wind,
+    title: "Broncoscopía",
+    description: "Procedimiento diagnóstico y terapéutico que permite explorar las vías respiratorias con tecnología de última generación para diagnóstico preciso y tratamiento de patologías broncopulmonares.",
+    condiciones: [
+      "Broncoscopía diagnóstica y terapéutica",
+      "Lavado broncoalveolar",
+      "Biopsia bronquial y transbronquial",
+      "Extracción de cuerpos extraños",
+      "Hemoptisis y obstrucciones bronquiales"
+    ]
+  },
+  {
+    icon: Heart,
+    title: "Ecocardiografía",
+    description: "Estudio de imagen no invasivo del corazón que permite evaluar la estructura y función cardíaca en tiempo real, esencial para el diagnóstico de cardiopatías y seguimiento del paciente crítico.",
+    condiciones: [
+      "Evaluación de función ventricular",
+      "Diagnóstico de valvulopatías",
+      "Ecocardiografía en paciente crítico",
+      "Monitoreo hemodinámico por ultrasonido",
+      "Detección de derrame pericárdico"
+    ]
+  },
+  {
+    icon: Siren,
     title: "Manejo de Infecciones Severas",
     description: "Tratamiento especializado de infecciones graves con protocolos basados en evidencia y experiencia en manejo de pacientes críticos.",
     condiciones: [
