@@ -87,7 +87,7 @@ const especialidades = [
     ]
   },
   {
-    icon: Siren,
+    icon: ShieldAlert,
     title: "Manejo de Infecciones Severas",
     description: "Tratamiento especializado de infecciones graves con protocolos basados en evidencia y experiencia en manejo de pacientes críticos.",
     condiciones: [
